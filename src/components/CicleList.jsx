@@ -1,11 +1,7 @@
-import React, { useState } from 'react'
 import { Draggable, Droppable } from 'react-beautiful-dnd';
 import { Item } from './Item';
 
-export const CicleList = ({ courses: initialCourses, semestre }) => {
-
-  const [courses, setCourses] = useState(initialCourses);
-
+export const CicleList = ({ courses, semestre }) => {
 
   return (
     <Droppable
@@ -16,9 +12,9 @@ export const CicleList = ({ courses: initialCourses, semestre }) => {
         <ul
           {...droppableProvided.droppableProps}
           ref={droppableProvided.innerRef}
-          className='flex flex-row m-3 items-center'
+          className='flex flex-row m-3 items-center flex-wrap'
         >
-          <h2 className='font-bold text-xl text-neutral-400 mr-5'>{semestre}</h2>
+          <h2 className='font-bold text-xl text-neutral-400 mr-'>{semestre}</h2>
           {
             courses.map((course, index) => (
               <Draggable

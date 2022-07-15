@@ -1,13 +1,4 @@
 export const initialCourses = [[
-	// {
-	// 	id: 146,
-	// 	credits: 6,
-	// 	cicle: 'siempre',
-	// 	requiredCourses: [
-	// 		170, 72
-	// 	],
-	// 	text: "Física 1",
-	// },
 	{
 		id: '28',
 		credits: 4,
@@ -24,7 +15,7 @@ export const initialCourses = [[
 		requiredCourses: [
 
 		],
-		text: "Matemática báscia 1",
+		text: "Matemática básica 1",
 	},
 	{
 		id: '2666',
@@ -96,7 +87,7 @@ export const initialCourses = [[
 	{
 		id: '2797',
 		credits: 2,
-		cicle: '1',
+		cicle: '3',
 		requiredCourses: [
 			"170"
 		],
@@ -106,7 +97,7 @@ export const initialCourses = [[
 	{
 		id: '2795',
 		credits: 5,
-		cicle: '1',
+		cicle: '3',
 		requiredCourses: [
 			"170"
 		],
@@ -116,7 +107,7 @@ export const initialCourses = [[
 	{
 		id: '2796',
 		credits: 4,
-		cicle: '1',
+		cicle: '3',
 		requiredCourses: [
 			"170"
 		],
@@ -126,7 +117,7 @@ export const initialCourses = [[
 	{
 		id: '290',
 		credits: 10,
-		cicle: '1',
+		cicle: '3',
 		requiredCourses: [
 			"170"
 		],
@@ -135,12 +126,86 @@ export const initialCourses = [[
 	{
 		id: '146',
 		credits: 6,
-		cicle: '1',
+		cicle: '3',
 		requiredCourses: [
 			"170",
 			"72"
 		],
 		text: "Física 1",
 	},
-]
+],
+[
+	{
+		id: '949',
+		credits: 5,
+		cicle: '4',
+		requiredCourses: [
+			"290",
+			"2667"
+		],
+		text: "Estadística 1",
+	},
+	{
+		id: '2798',
+		credits: 3,
+		cicle: '4',
+		requiredCourses: [
+			"2795",
+			"2796",
+			"2797"
+		],
+		text: "Lenguajes formales y de programación",
+	},
+	{
+		id: '2799',
+		credits: 5,
+		cicle: '4',
+		requiredCourses: [
+			"2795",
+			"2796",
+			"2797"
+		],
+		text: "Mate computo 2",
+	},
+	{
+		id: '2800',
+		credits: 5,
+		cicle: '4',
+		requiredCourses: [
+			"2795",
+			"2796",
+			"2797",
+			"290"
+		],
+		text: "Intr. a la prog. y computación 2",
+	},
+	{
+		id: '291',
+		credits: 5,
+		cicle: '4',
+		requiredCourses: [
+			"290"
+		],
+		text: "Matemática intermedia 2",
+	},
+	{
+		id: '292',
+		credits: 5,
+		cicle: '4',
+		requiredCourses: [
+			"290"
+		],
+		text: "Matemática intermedia 3",
+	},
+	{
+		id: '147',
+		credits: 6,
+		cicle: '4',
+		requiredCourses: [
+			"290",
+			"146"
+		],
+		text: "Física 2",
+	},
+],
 ];

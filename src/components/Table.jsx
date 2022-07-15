@@ -1,19 +1,16 @@
-import { Draggable, Droppable } from 'react-beautiful-dnd'
 import { CicleList } from './CicleList';
-import { Item } from './Item'
 
-
-export const Table = ({ cicles }) => {
+export const Table = ({ semesters }) => {
 
 	return (
 
-		<div className='mt-4 bg-neutral-700 p-1 shadow rounded-lg'>
+		<div className='mt-4 bg-neutral-700 p-1 shadow rounded-lg w-full'>
 
-			{cicles.map((courses, i) => (
+			{semesters.map((courses, i) => (
 				<CicleList courses={courses} key={i} semestre={`Semestre ${i + 1}`} />
 			))}
 
-		</div>
+		</div >
 
 	)
 }
