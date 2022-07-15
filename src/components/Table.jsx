@@ -1,13 +1,16 @@
-import { CicleList } from './CicleList';
+import { Semester } from './';
+import { useSemesterStore } from '../hooks';
 
-export const Table = ({ semesters }) => {
+export const Table = () => {
+
+	const { semesters } = useSemesterStore();
 
 	return (
 
 		<div className='mt-4 bg-neutral-700 p-1 shadow rounded-lg w-full'>
 
 			{semesters.map((courses, i) => (
-				<CicleList courses={courses} key={i} semestre={`Semestre ${i + 1}`} />
+				<Semester courses={courses} key={i} semesterName={`Semestre ${i + 1}`} />
 			))}
 
 		</div >

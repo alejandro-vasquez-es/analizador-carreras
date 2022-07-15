@@ -1,6 +1,5 @@
-import React from 'react'
 
-export const Item = ({ course }) => {
+export const Course = ({ course }) => {
 
 	const { id, credits, text, requiredCourses, creditsRequired } = course;
 
@@ -10,7 +9,7 @@ export const Item = ({ course }) => {
 				<p className='px-1 bg-neutral-500 flex-1 items-center flex'>{id}</p>
 				<p className='px-1 flex-1 items-center flex'>{credits}</p>
 			</div>
-			<p className='text-center grow align-middle mx-2'>{text}</p>
+			<p className='text-center grow align-middle mx-2 flex items-center justify-center'>{text}</p>
 			{
 				(requiredCourses.length > 0 || creditsRequired != null) &&
 				<div className='flex flex-col bg-neutral-500 items-center'>
