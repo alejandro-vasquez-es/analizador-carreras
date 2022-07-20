@@ -1,10 +1,15 @@
 
-export const Course = ({ course }) => {
+export const Course = ({ draggableProvided, course }) => {
 
 	const { id, credits, text, requiredCourses, creditsRequired } = course;
 
 	return (
-		<div className='flex flex-row shadow-md overflow-hidden rounded m-2 bg-neutral-600 '>
+		<li
+			className='flex flex-row shadow-md overflow-hidden rounded m-2 text-base bg-neutral-600  shrink-0 basis-'
+			{...draggableProvided.draggableProps}
+			ref={draggableProvided.innerRef}
+			{...draggableProvided.dragHandleProps}
+		>
 			<div className='bg-neutral-400 items-center flex flex-col'>
 				<p className='px-1 bg-neutral-500 flex-1 items-center flex'>{id}</p>
 				<p className='px-1 flex-1 items-center flex'>{credits}</p>
@@ -32,6 +37,6 @@ export const Course = ({ course }) => {
 				</div>
 
 			}
-		</div>
+		</li>
 	)
 }

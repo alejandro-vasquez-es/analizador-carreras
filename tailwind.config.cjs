@@ -13,7 +13,9 @@ module.exports = {
     minWidth: {
       '1/4': '25%',
       '1/5': '20%',
-      '1/6': '16%'
+      '1/6': '16%',
+      'min': 'min-content',
+      'course': '10rem'
     },
     minHeight: {
       '4rm': '4rem'

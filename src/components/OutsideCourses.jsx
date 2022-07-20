@@ -8,7 +8,7 @@ export const OutsideCourses = () => {
 	const { coursesOutside } = useSemesterStore();
 
 	return (
-		<div className='flex flex-row w-full'>
+		<div className='flex flex-row w-full sticky top-0 bg-neutral-800 p-2 rounde-sm'>
 			<h2 className='text-xl font-bold mt-4'>Cursos:</h2>
 
 			<Droppable
@@ -19,7 +19,7 @@ export const OutsideCourses = () => {
 					<ul
 						{...droppableProvided.droppableProps}
 						ref={droppableProvided.innerRef}
-						className='flex flex-row m-3 items-center flex-wrap w-full overflow-x-hidden min-h-4rm center rounde-lg border-dashed border-2 border-blue-300'
+						className='lg:flex-wrap flex flex-row overflow-x-auto grow items-center m-3 min-h-4rm center rounde-lg border-dashed border-2 border-neutral-700'
 					>
 						<CoursesList courses={coursesOutside} />
 						{droppableProvided.placeholder}

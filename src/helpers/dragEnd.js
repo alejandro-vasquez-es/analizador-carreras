@@ -11,10 +11,10 @@ export const dragEnd = (props) => {
 	} = result;
 
 	const sourceSemesterName = source?.droppableId;
-	const sourceSemesterIndex = sourceSemesterName?.substr(sourceSemesterName.length - 1) - 1;
+	const sourceSemesterIndex = sourceSemesterName?.split('Semestre ')[1] - 1;
 
 	const destinationSemesterName = destination?.droppableId;
-	const destinationSemesterIndex = destinationSemesterName?.substr(destinationSemesterName.length - 1) - 1;
+	const destinationSemesterIndex = destinationSemesterName?.split('Semestre ')[1] - 1;
 
 	if (!destination) return;
 
@@ -61,7 +61,7 @@ export const dragEnd = (props) => {
 	if (source.droppableId == 'courses' && destination.droppableId != 'courses') {
 
 		const actualCourse = coursesOutside.find(course => course.id == idSelected);
-		if (validate(actualCourse)) {
+		if (validate(destinationSemesterIndex, semesters, actualCourse, sourceSemesterIndex)) {
 			addCourse({
 				semesterIndex: destinationSemesterIndex,
 				destinationIndex: destination.index,
@@ -75,7 +75,7 @@ export const dragEnd = (props) => {
 	if (source.droppableId != 'courses' && destination.droppableId != 'courses' && source.droppableId != destination.droppableId) {
 
 		const actualCourse = semesters[sourceSemesterIndex].find(course => course.id == idSelected);
-		if (validate(actualCourse)) {
+		if (validate(destinationSemesterIndex, semesters, actualCourse, sourceSemesterIndex)) {
 			addCourse({
 				semesterIndex: destinationSemesterIndex,
 				destinationIndex: destination.index,

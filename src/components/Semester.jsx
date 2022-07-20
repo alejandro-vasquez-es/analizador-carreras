@@ -10,15 +10,20 @@ export const Semester = ({ courses, semesterName }) => {
       droppableId={semesterName}
     >
       {(droppableProvided) => (
-        <ul
-          {...droppableProvided.droppableProps}
+
+        <div
           ref={droppableProvided.innerRef}
-          className='flex flex-row m-3 items-center flex-wrap'
+          className='flex p-2 gap-1'
         >
-          <h2 className='font-bold text-xl text-neutral-400 mr-'>{semesterName}</h2>
-          <CoursesList courses={courses} />
-          {droppableProvided.placeholder}
-        </ul>
+          <h2 className='shrink-0 mt-4  font-bold text-lg text-neutral-400 '>{semesterName}</h2>
+          <ul
+            {...droppableProvided.droppableProps}
+            className='lg:flex-wrap flex flex-row overflow-x-auto grow items-center'
+          >
+            <CoursesList courses={courses} />
+            {droppableProvided.placeholder}
+          </ul>
+        </div>
       )}
     </Droppable>
   )
